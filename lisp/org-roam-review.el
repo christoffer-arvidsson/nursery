@@ -680,7 +680,8 @@ them as reviewed with `org-roam-review-accept',
     (org-roam-review--with-current-review-buffer
       (let ((continue t)
             (found-pos nil)
-            (id (org-roam-node-id node)))
+            (id (org-roam-node-id node))
+            (major-mode 'org-mode))
         (save-excursion
           (goto-char (point-min))
           (while (and (not found-pos) continue)
